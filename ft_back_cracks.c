@@ -6,7 +6,7 @@
 /*   By: gogrkovi <gogrkovi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 00:11:56 by gogrkovi          #+#    #+#             */
-/*   Updated: 2019/01/23 19:46:23 by gogrkovi         ###   ########.fr       */
+/*   Updated: 2019/01/25 14:53:33 by gogrkovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char		**ft_createmap(int piece, char **map)
 	nt = 0;
 	if (!(map = malloc(sizeof(char *) * (ft_sqrt(piece * 4) + 1))))
 		return (NULL);
-	while (nt <	ft_sqrt(piece * 4))
+	while (nt < ft_sqrt(piece * 4))
 	{
 		if (!(map[nt] = malloc(sizeof(char) * ft_sqrt(piece * 4) + 1)))
 		{
@@ -109,7 +109,6 @@ t_etris		*ft_make_struct(char **tab, int piece, t_etris *stock)
 
 	i = -4;
 	u = -1;
-
 	if (!(stock = (t_etris *)malloc(sizeof(*stock) * (piece + 1))))
 		return (NULL);
 	while (++u < piece)
@@ -119,5 +118,6 @@ t_etris		*ft_make_struct(char **tab, int piece, t_etris *stock)
 		stock[u].nb = u;
 	}
 	stock[u].tetri = NULL;
+	ft_lettre(stock);
 	return (stock);
 }

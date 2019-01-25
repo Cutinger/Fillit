@@ -6,7 +6,7 @@
 /*   By: gogrkovi <gogrkovi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 23:09:46 by gogrkovi          #+#    #+#             */
-/*   Updated: 2019/01/23 19:27:52 by gogrkovi         ###   ########.fr       */
+/*   Updated: 2019/01/25 14:19:08 by gogrkovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,6 @@ char**ft_creattab(char **tab, int i)
 			ft_free(tab, nt);
 			return (NULL);
 		}
-		int f ;
-		f = ft_nb_of_y(tab, j);
 		ft_create_pieces(tmp, tab, &i, nt);
 	}
 	tmp[nt] = NULL;
