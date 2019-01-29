@@ -6,7 +6,7 @@
 /*   By: gogrkovi <gogrkovi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 21:57:17 by gogrkovi          #+#    #+#             */
-/*   Updated: 2019/01/25 14:36:19 by gogrkovi         ###   ########.fr       */
+/*   Updated: 2019/01/28 18:14:23 by gogrkovi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int		check(char *tmp, int i, int *piece, int d)
 			return (checkpiece(tmp, &d) == 1 ? check(tmp, i + 1, piece, d) : 0);
 		i++;
 	}
-	if (j[0] == 0 && j[1] == 0)
+	if (j[0] == 0 && j[1] == 0 && i <= 545)
 		return (*piece > 0 ? 1 : 0);
 	return (0);
 }
